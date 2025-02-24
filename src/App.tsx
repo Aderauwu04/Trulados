@@ -1,31 +1,13 @@
-import { useState } from 'react'
-import Collections from './components/Collections'
-import truladosLogo from '/logo.svg'
+import Navbar from '@/components/NavBar'
+import Footer from '@/components/Footer'
+import Home from '@/views/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Collections
-      />
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={truladosLogo} className="logo" alt="Vite logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Navbar/>
+      <Home/>
+      <Footer/>
     </>
   )
 }
